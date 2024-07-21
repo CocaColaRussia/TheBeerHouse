@@ -1,0 +1,131 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Template.master.cs" Inherits="Template" %>
+<%@ Register Src="Controls/ThemeSelector.ascx" TagName="ThemeSelector" TagPrefix="mb" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>The Beer House</title>    
+</head>
+<body>
+    <form id="Main" runat="server">
+
+    <!-- HEADER -->
+    <div id="header">
+        <div id="header2">
+            <div id="headermenu">
+                <asp:SiteMapDataSource 
+                    ID="SiteMapDataSource1" 
+                    runat="server" 
+                    StartingNodeOffset="0" 
+                    />
+                <asp:Menu 
+                    ID="mnuHeader" 
+                    runat="server"
+                    CssClass="headermenulink"
+                    DataSourceID="SiteMapDataSource1"
+                    Orientation="Horizontal"
+                    MaximumDynamicDisplayLevels="0"
+                    SkipLinkText=""
+                    StaticDisplayLevels="2" 
+                    />
+            </div>
+            <div id="loginbox">
+                Login box here...
+            </div>
+            <div id="themeselector">
+                <mb:ThemeSelector 
+                    ID="ThemeSelector1" 
+                    runat="server" 
+                    />
+            </div>
+        </div>
+    </div>
+    <!-- END OF HEADER -->
+
+    <!-- CONTAINER -->
+    <div id="container">
+        <div id="container2">
+            <div id="rightcol">
+                <div class="text">
+                    Some text...
+                </div>
+                <asp:ContentPlaceHolder id="RightContent" runat="server" />
+            </div>
+            <div id="centercol">
+                <div id="breadcrumb">
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" />
+                </div>
+                <div id="centercolcontent">
+                    <asp:ContentPlaceHolder id="MainContent" runat="server">
+                        <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+                        <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div id="leftcol">
+                <div id="sectiontitle">
+                    <asp:Image 
+                        ID="imgArrow1" 
+                        runat="server" 
+                        ImageUrl="~/images/arrowr.gif"
+                        ImageAlign="Left" 
+                        hspace="6" 
+                        />
+                    Site News
+                </div>
+                <div class="text">
+                    <b>11 February 2014 :: News Header</b>
+                    <br />
+                    News text...
+                </div>
+                <div class="alternatetext">
+                    <b>11 February 2014 :: News Header</b>
+                    <br />
+                    Other news text...
+                </div>
+                <asp:ContentPlaceHolder id="LeftContent" runat="server" />
+                <div id="bannerbox">
+                    <a href="http://www.templatemonster.com" target="_blank">
+                        Website Template supplied by Template Monster,
+                        a top global provider of website design templates
+                        <br /><br />
+                        <asp:Image 
+                            runat="server" 
+                            ID="TemplateMonsterBanner"
+                            ImageUrl="~/images/templatemonster.jpg" 
+                            Width="100px" 
+                            />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF CONTAINER -->
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <div id="footermenu">
+            <asp:Menu ID="mnuFooter" runat="server"
+                            style="margin-left:auto; margin-right: auto;"
+                            CssClass="footermenulink"
+                            DataSourceID="SiteMapDataSource1"
+                            Orientation="Horizontal"
+                            MaximumDynamicDisplayLevels="0"
+                            SkipLinkText=""
+                            StaticDisplayLevels="2" />            
+        </div>
+        <div id="footertext">
+            <small>
+                Copyright &copy; 2005 Marco Bellinaso &amp;
+                <a href="http://www.wrox.com" target="_blank">Wrox Press</a>
+                <br />
+                Website Template kindly offered by <a href="http://www.templatemonster.com" target="_blank">Template Monster</a>
+            </small>
+        </div>
+    </div>
+    <!-- END OF FOOTER -->    
+    </form>
+</body>
+</html>

@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TBH_Web", "TBH_Web\", "{8FF6B82A-4842-4096-AA3C-057E4596DEB2}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		ProjectReferences = "{60541e9d-66f5-4787-b37b-7c8d87254d1d}|TBH_CustomEvents.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_59809"
 		Debug.AspNetCompiler.PhysicalPath = "TBH_Web\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59809\"
@@ -25,13 +26,22 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TBH_Web", "TBH_Web\", "{8FF
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TBH_CustomEvents", "TBH_CustomEvents\TBH_CustomEvents.csproj", "{60541E9D-66F5-4787-B37B-7C8D87254D1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8FF6B82A-4842-4096-AA3C-057E4596DEB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8FF6B82A-4842-4096-AA3C-057E4596DEB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FF6B82A-4842-4096-AA3C-057E4596DEB2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FF6B82A-4842-4096-AA3C-057E4596DEB2}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{60541E9D-66F5-4787-B37B-7C8D87254D1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60541E9D-66F5-4787-B37B-7C8D87254D1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60541E9D-66F5-4787-B37B-7C8D87254D1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60541E9D-66F5-4787-B37B-7C8D87254D1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

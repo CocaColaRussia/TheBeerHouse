@@ -1,0 +1,17 @@
+﻿<asp:TextBox runat="server" BorderStyle="dashed" BorderWidth="1px" />
+
+<asp:Label runat="server" SkinID="FeedbackOK" ForeColor="green" />
+
+<asp:Label runat="server" SkinID="FeedbackKO" ForeColor="red" />
+
+<asp:SiteMapPath runat="server">
+   <PathSeparatorTemplate>
+      <asp:Image 
+                runat="server" 
+                ImageUrl="images/sepwhite.gif"
+                hspace="4" 
+                align="middle" 
+                />
+   </PathSeparatorTemplate>
+</asp:SiteMapPath>
+
